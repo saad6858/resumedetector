@@ -16,6 +16,7 @@ This Streamlit application allows users to:
 """
 
 # =========================================================
+import ui_config
 # Import Libraries
 # =========================================================
 
