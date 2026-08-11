@@ -14,12 +14,12 @@ Author:
 AI Resume Analyzer Project
 =========================================================
 """
-
 # ==============================
 # Import Required Libraries
 # ==============================
 
 import re
+import os
 import nltk
 
 from nltk.corpus import stopwords
@@ -30,10 +30,16 @@ from nltk.stem import WordNetLemmatizer
 # (Only the first time)
 # ==============================
 
+# Ensure NLTK data downloads to a location the app can find
+nltk_data_dir = os.path.join(os.path.expanduser('~'), 'nltk_data')
+os.makedirs(nltk_data_dir, exist_ok=True)
+nltk.data.path.append(nltk_data_dir)
+
 resources = {
     "punkt": "tokenizers/punkt",
     "stopwords": "corpora/stopwords",
-    "wordnet": "corpora/wordnet"
+    "wordnet": "corpora/wordnet",
+    "punkt_tab": "tokenizers/punkt_tab"
 }
 
 for resource_name, resource_path in resources.items():
@@ -44,7 +50,7 @@ for resource_name, resource_path in resources.items():
 
     except LookupError:
 
-        nltk.download(resource_name)
+        nltk.download(resource_name, download_dir=nltk_data_dir)
 
 # ==============================
 # Initialize NLP Objects
