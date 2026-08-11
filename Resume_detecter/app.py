@@ -14,7 +14,6 @@ This Streamlit application allows users to:
 
 =========================================================
 """
-import ui_config
 
 # =========================================================
 # Import Libraries
@@ -33,12 +32,54 @@ from utils.predictor import (
 )
 
 # =========================================================
-# Streamlit Page Configuration
+# Page Config + Maximum Aggression Branding Removal CSS
 # =========================================================
-
+
+st.set_page_config(
+    page_title="AI Resume Analyzer",
+    page_icon="📄",
+    layout="wide"
+)
+
+_HIDE_ALL_STREAMLIT_CHROME = """
+<style>
+    #MainMenu {visibility: hidden !important; display: none !important;}
+    [data-testid="stMainMenu"] {display: none !important;}
+    button[kind="headerNoPadding"] {display: none !important;}
+
+    .stDeployButton {display: none !important;}
+    [data-testid="stDeployButton"] {display: none !important;}
+    a[href*="/fork"] {display: none !important;}
+
+    a[title="View source"] {display: none !important;}
+    a[href*="github.com"] svg {display: none !important;}
+    [data-testid="stHeaderActionElements"] {display: none !important;}
+
+    [data-testid="stToolbar"] {display: none !important;}
+    header [data-testid="stHeader"] {display: none !important;}
+    .stApp > header {display: none !important;}
+
+    footer {display: none !important;}
+    .stApp > footer {display: none !important;}
+    [data-testid="stFooter"] {display: none !important;}
+    [data-testid="stFooterV2"] {display: none !important;}
+
+    [data-testid="stDecoration"] {display: none !important;}
+    .stDecoration {display: none !important;}
+    img[alt*="Streamlit"] {display: none !important;}
+    img[alt*="streamlit"] {display: none !important;}
+    img[src*="streamlit"] {display: none !important;}
+
+    a[href*="streamlit.io"] {display: none !important;}
+
+    .stApp {padding-bottom: 0 !important;}
+    .reportview-container {padding-bottom: 0 !important;}
+</style>
+"""
+st.markdown(_HIDE_ALL_STREAMLIT_CHROME, unsafe_allow_html=True)
 
 # =========================================================
-# Custom CSS
+# Custom CSS — Sir Shan's Original Styling (UNCHANGED)
 # =========================================================
 
 st.markdown(
@@ -73,7 +114,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+
 # =========================================================
 # Application Title
 # =========================================================
