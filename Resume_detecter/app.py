@@ -19,6 +19,8 @@ This Streamlit application allows users to:
 # Import Libraries
 # =========================================================
 
+import ui_config
+
 import streamlit as st
 
 from utils.parser import extract_text
