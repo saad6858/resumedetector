@@ -1,37 +1,27 @@
 # =============================================================================
-# ui_config.py — UI Branding Removal & Page Config
-# Place this file in repo root. Add ONE line to top of app.py: import ui_config
+# ui_config.py — UI Branding Removal
+# MUST be imported BEFORE any other Streamlit calls in app.py
 # =============================================================================
 
 import streamlit as st
 
-# ⭐⭐⭐⭐⭐ PAGE CONFIG — must be FIRST Streamlit call
+# ⭐⭐⭐⭐⭐ EXACT replica of Sir Shan's set_page_config + menu_items=None added
 st.set_page_config(
     page_title="AI Resume Analyzer",
     page_icon="📄",
-    layout="centered",
-    menu_items=None  # Hides hamburger menu (Rerun, Settings, Print)
+    layout="wide",
+    menu_items=None  # Only addition: hides hamburger menu
 )
 
-# ⭐⭐⭐⭐⭐ CSS INJECTION — kills footer, header, deploy button, toolbar
+# ⭐⭐⭐⭐⭐ CSS to kill Streamlit Cloud branding ONLY
+# Does NOT change layout, colors, fonts, or any visual element Sir Shan designed
 _HIDE_BRANDING = """
 <style>
-    /* Hide hamburger menu completely */
     #MainMenu {visibility: hidden !important;}
-    
-    /* Hide Streamlit footer ("Created by Streamlit", "Hosted with Streamlit") */
     footer {visibility: hidden !important;}
-    
-    /* Hide top header bar */
     header {visibility: hidden !important;}
-    
-    /* Hide "Fork" / "Deploy" button */
     .stDeployButton {display: none !important;}
-    
-    /* Hide top-right toolbar */
     [data-testid="stToolbar"] {display: none !important;}
-    
-    /* Hide GitHub icon in top-right */
     [data-testid="stDecoration"] {display: none !important;}
 </style>
 """
