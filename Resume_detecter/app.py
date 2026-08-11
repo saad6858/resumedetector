@@ -37,14 +37,6 @@ from utils.predictor import (
 # Streamlit Page Configuration
 # =========================================================
 
-"""
-st.set_page_config(
-    page_title="AI Resume Analyzer",
-    page_icon="📄",
-    layout="wide"
-)
-"""
-
 # =========================================================
 # Custom CSS
 # =========================================================
