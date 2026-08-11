@@ -19,6 +19,8 @@ This Streamlit application allows users to:
 # Import Libraries
 # =========================================================
 
+import ui_config
+
 import streamlit as st
 
 from utils.parser import extract_text
@@ -34,11 +36,6 @@ from utils.predictor import (
 # =========================================================
 # Streamlit Page Configuration
 # =========================================================
-st.set_page_config(
-    page_title="AI Resume Analyzer",
-    page_icon="📄",
-    layout="wide"
-)
 
 # =========================================================
 # Custom CSS
