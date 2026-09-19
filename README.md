@@ -1,4 +1,4 @@
-# Resume Match System
+ko# Resume Match System
 
 NLP-based resume and job description matching system built during the Bano Qabil Agentic AI program.
 
@@ -35,8 +35,6 @@ resumedetector/
 │       ├── preprocessing.py
 │       └── test_predictor.py
 └── README.md
-
-
 
 ## How it works
 
