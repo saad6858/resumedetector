@@ -36,6 +36,8 @@ resumedetector/
 │       └── test_predictor.py
 └── README.md
 
+
+
 ## How it works
 
 1. Resume text is extracted from PDF or DOCX  
