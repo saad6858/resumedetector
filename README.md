@@ -1,6 +1,3 @@
-**Updated README.md (matches your exact current structure)**
-
-```markdown
 # Resume Match System
 
 NLP-based resume and job description matching system built during the Bano Qabil Agentic AI program.
@@ -19,7 +16,7 @@ A simple frontend is included so the full flow can be tested end-to-end.
 
 ## Project Structure
 
-```
+```text
 resumedetector/
 ├── .devcontainer/
 │   └── devcontainer.json
@@ -38,7 +35,6 @@ resumedetector/
 │       ├── preprocessing.py
 │       └── test_predictor.py
 └── README.md
-```
 
 ## How it works
 
@@ -69,5 +65,3 @@ resumedetector/
 
 Saad Maqbool  
 Bano Qabil — Agentic AI Program
-```
-
