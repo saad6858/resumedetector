@@ -55,10 +55,6 @@ A simple frontend is included so the full flow can be tested end-to-end.
 - pdfplumber / python-docx
 - Streamlit (frontend)
 
-## Live Demo
-
-[Add your deployed frontend link here]
-
 ## Author
 
 Saad Maqbool  
